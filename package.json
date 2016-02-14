@@ -1,13 +1,16 @@
 {
-  "name": "angulartics-google-analytics",
-  "version": "0.1.4",
-  "description": "Google Analytics plugin for Angulartics",
+  "name": "angulartics-chrome-platform-analytics",
+  "version": "0.0.1",
+  "description": "Chrome Platform Analytics plugin for Angulartics",
   "keywords": [
     "google",
+    "chrome",
     "analytics",
     "plugin",
     "angular",
-    "angulartics"
+    "angulartics",
+    "packaged",
+    "app"
   ],
   "author": "Luis Farzati <lfarzati@gmail.com> (https://github.com/luisfarzati)",
   "contributors": [
@@ -27,24 +30,25 @@
     "Blake Miller <blake@tengrade.com> (https://github.com/blak3mill3r)",
     "Hannah Fouasnon <hanelifou@gmail.com> (https://github.com/fouasnon)",
     "Alex Logvynovskiy <alex@busuu.com> (https://github.com/dr-axly)",
-    "Fil Maj <maj.fil@gmail.com> (https://github.com/filmaj)"
+    "Fil Maj <maj.fil@gmail.com> (https://github.com/filmaj)",
+    "Paul Hitz <paulhitz@gmail.com> (https://github.com/paulhitz)"
   ],
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "build": "mkdir -p dist && uglifyjs lib/angulartics-google-analytics.js --compress --source-map dist/angulartics-google-analytics.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-google-analytics.min.js.map -o dist/angulartics-google-analytics.min.js"
+    "build": "mkdir -p dist && uglifyjs lib/angulartics-chrome-platform-analytics.js --compress --source-map dist/angulartics-chrome-platform-analytics.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-chrome-platform-analytics.min.js.map -o dist/angulartics-chrome-platform-analytics.min.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/angulartics/angulartics-google-analytics"
+    "url": "https://github.com/paulhitz/angulartics-chrome-platform-analytics"
   },
   "bugs": {
-    "url": "https://github.com/angulartics/angulartics-google-analytics/issues"
+    "url": "https://github.com/paulhitz/angulartics-chrome-platform-analytics/issues"
   },
   "license": "MIT",
   "peerDependencies": {
-    "angulartics": "~1.0.0"
+    "angulartics": "~1.0.3"
   },
   "devDependencies": {
     "uglify-js": "^2.4.23"

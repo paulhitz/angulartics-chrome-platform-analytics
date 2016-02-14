@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "angulartics-chrome-platform-analytics",
+  "version": "0.0.1",
+  "description": "Chrome Platform Analytics plugin for Angulartics",
+
+  "app": {
+    "background": {
+      "scripts": ["js/background.js"]
+    }
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "browser"
+  ]
+}

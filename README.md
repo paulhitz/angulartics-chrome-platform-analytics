@@ -1,8 +1,12 @@
-## angulartics-google-analytics
+## angulartics-chrome-platform-analytics
 
-[![NPM version][npm-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-downloads-url] [![Bower version][bower-image]][bower-url] [![Dependencies status][dep-status-image]][dep-status-url] [![MIT license][license-image]][license-url] [![Join the Slack chat][slack-image]][slack-url]
+[![NPM version][npm-image]][npm-url] [![Bower version][bower-image]][bower-url] [![MIT license][license-image]][license-url]
 
-Google Analytics plugin for [Angulartics](https://github.com/angulartics/angulartics).
+Chrome Platform Analytics plugin for [Angulartics](https://github.com/angulartics/angulartics).
+
+(Chrome Platform Analytics is a Javascript library supporting the use of Google Analytics from Chrome Platform Applications)
+
+Please see [the Chrome Platform Analytics wiki](https://github.com/GoogleChrome/chrome-platform-analytics/wiki) for more information.
 
 ## Install
 
@@ -13,17 +17,17 @@ Then you can install this package either with `npm` or with `bower`.
 ### npm
 
 ```shell
-npm install angulartics-google-analytics
+npm install angulartics-chrome-platform-analytics
 ```
 
-Then add `angulartics.google.analytics` as a dependency for your app:
+Then add `angulartics-chrome-platform-analytics` as a dependency for your app:
 
 ```javascript
 require('angulartics')
 
 angular.module('myApp', [
-  'angulartics', 
-  require('angulartics-google-analytics')
+  'angulartics',
+  require('angulartics-chrome-platform-analytics')
 ]);
 ```
 
@@ -32,21 +36,21 @@ angular.module('myApp', [
 ### bower
 
 ```shell
-bower install angulartics-google-analytics
+bower install angulartics-chrome-platform-analytics
 ```
 
 Add the `<script>` to your `index.html`:
 
 ```html
-<script src="/bower_components/angulartics-google-analytics/dist/angulartics-google-analytics.min.js"></script>
+<script src="/bower_components/angulartics-chrome-platform-analytics/dist/angulartics-chrome-platform-analytics.min.js"></script>
 ```
 
-Then add `angulartics.google.analytics` as a dependency for your app:
+Then add `angulartics-chrome-platform-analytics` as a dependency for your app:
 
 ```javascript
 angular.module('myApp', [
-  'angulartics', 
-  'angulartics.google.analytics'
+  'angulartics',
+  'angulartics-chrome-platform-analytics'
 ]);
 ```
 
@@ -67,12 +71,6 @@ Done. Open your app, browse across the different routes and check [the realtime 
 
 Documentation is available on the [Angulartics site](http://luisfarzati.github.io/angulartics).
 
-### Settings
-Module settings are done via the `$analyticsProvider.settings.ga` property.  The following are GA-specific properties:
-* `transport`
-  _(Default: `undefined`)_ -
-  sets the `transport` property for the `ga` function call.  See the [GA Transport Documentation](https://developers.google.com/analytics/devguides/collection/analyticsjs/field-reference#transport) for more information how to properly set this value.  This should be a string.
-
 ## Development
 
 ```shell
@@ -83,15 +81,9 @@ npm run build
 
 [MIT](LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/angulartics-google-analytics.svg
-[npm-url]: https://npmjs.org/package/angulartics-google-analytics
-[npm-downloads-image]: https://img.shields.io/npm/dm/angulartics-google-analytics.svg
-[npm-downloads-url]: https://npmjs.org/package/angulartics-google-analytics
-[bower-image]: https://img.shields.io/bower/v/angulartics-google-analytics.svg
-[bower-url]: http://bower.io/search/?q=angulartics-google-analytics
-[dep-status-image]: https://img.shields.io/david/angulartics/angulartics-google-analytics.svg
-[dep-status-url]: https://david-dm.org/angulartics/angulartics-google-analytics
+[npm-image]: https://img.shields.io/npm/v/angulartics-chrome-platform-analytics.svg
+[npm-url]: https://npmjs.org/package/angulartics-chrome-platform-analytics
+[bower-image]: https://img.shields.io/bower/v/angulartics-chrome-platform-analytics.svg
+[bower-url]: http://bower.io/search/?q=angulartics-chrome-platform-analytics
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: LICENSE
-[slack-image]: https://angulartics.herokuapp.com/badge.svg
-[slack-url]: https://angulartics.herokuapp.com

@@ -1,26 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="sample" ng-csp>
 <head>
 	<meta charset="utf8">
-	<title>Google Analytics sample | Angulartics</title>
-	<link rel="stylesheet" href="//bootswatch.com/cosmo/bootstrap.min.css">
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-	<script src="/node_modules/angulartics/dist/angulartics.min.js"></script>
-	<script src="/dist/angulartics-google-analytics.min.js"></script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  	ga('create', 'UA-10255892-9', { 'cookieDomain': 'none' });
-	</script>
-
+	<title>Chrome Platform Analytics sample | Angulartics</title>
+	<link rel="stylesheet" href="../bower_components/bootswatch-dist/css/bootstrap.min.css">
 </head>
-<body ng-app="sample">
+<body ng-controller="SampleCtrl">
 
 <div class="navbar navbar-default">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#/">My App</a>
+		<a class="navbar-brand" href="#/">My Chrome App</a>
 	</div>
 	<div>
 		<ul class="nav navbar-nav">
@@ -51,19 +40,20 @@
 		Open the network inspector in your browser, click any of the nav options or buttons above and you'll see the analytics
 		request being executed. Then check <a class="alert-link" href="http://www.google.com/analytics/web/">your Google Analytics dashboard</a>.
 	</p>
+
+	<p class="alert alert-warning">
+		Note: This example will need to run as a <strong>Chrome App</strong>. Otherwise calls to 'chrome.runtime' will fail.
+		<br><br>
+		To run it as a Chrome app, open the chrome extensions page, select 'developer mode' and load it as an unpacked extension.
+	</p>
 </div>
 
-<script>
-	angular.module('sample', ['angulartics', 'angulartics.google.analytics'])
-	.config(function ($routeProvider, $analyticsProvider) {
-		$routeProvider
-			.when('/',  { template: '<h1>Root Page</h1>', controller: 'SampleCtrl' })
-			.when('/a', { template: '<h1>Page "A"</h1>',  controller: 'SampleCtrl' })
-			.when('/b', { template: '<h1>Page "B"</h1>',  controller: 'SampleCtrl' })
-			.when('/c', { template: '<h1>Page "C"</h1>',  controller: 'SampleCtrl' })
-			.otherwise({ redirectTo: '/' });
-	})
-	.controller('SampleCtrl', function () {});
-</script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angulartics/dist/angulartics.min.js"></script>
+<script src="dist/angulartics-chrome-platform-analytics.min.js"></script>
+<script src="bower_components/chrome-platform-analytics/google-analytics-bundle.js"></script>
+<script src="js/setup.js"></script>
+<script src="js/sample.js"></script>
+
 </body>
 </html>
