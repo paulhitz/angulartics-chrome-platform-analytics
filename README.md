@@ -45,12 +45,12 @@ Add the `<script>` to your `index.html`:
 <script src="/bower_components/angulartics-chrome-platform-analytics/dist/angulartics-chrome-platform-analytics.min.js"></script>
 ```
 
-Then add `angulartics-chrome-platform-analytics` as a dependency for your app:
+Then add `angulartics.chrome.platform.analytics` as a dependency for your app:
 
 ```javascript
 angular.module('myApp', [
   'angulartics',
-  'angulartics-chrome-platform-analytics'
+  'angulartics.chrome.platform.analytics'
 ]);
 ```
 
